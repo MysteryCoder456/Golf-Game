@@ -4,7 +4,7 @@ from glm import vec2
 from game.main import Game
 
 def main():
-    game = Game(vec2(800, 600))
+    game = Game(vec2(1020, 714))
     fps = 60
     clock = pygame.time.Clock()
     while True:

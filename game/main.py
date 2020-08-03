@@ -1,6 +1,8 @@
 import pygame
 from glm import vec2
 
+from .tile import Tile
+
 
 class Game:
     def __init__(self, win_size: vec2):
@@ -9,8 +11,10 @@ class Game:
         self.background = (255, 255, 255)
         print(win_size)
 
+        self.t = Tile(vec2(50, 50), vec2(34, 34))
+
     def update(self, dt):
         pass
 
     def render(self):
-        pygame.draw.rect(self.win, (255, 0, 0), (self.x, 50, 50, 50))
+        self.t.render(self.win)
