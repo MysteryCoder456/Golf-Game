@@ -1,7 +1,7 @@
 import pygame
 from glm import vec2
 
-from .tile import Tile
+from .level import Level
 
 
 class Game:
@@ -11,10 +11,11 @@ class Game:
         self.background = (255, 255, 255)
         print(win_size)
 
-        self.t = Tile(vec2(50, 50), vec2(34, 34))
+        self.l = Level(self.win_size)
+        self.l.build_level()
 
     def update(self, dt):
         pass
 
     def render(self):
-        self.t.render(self.win)
+        self.l.render(self.win)
